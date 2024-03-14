@@ -1,9 +1,9 @@
-# Lab 8 -- SEG3125
+# Lab 8 & 9 -- SEG3125
 
-### 0. Link to this webpage: https://seg3125-a.github.io/group44-lab8/
+### 0. Link to this webpage: https://seg3125-a.github.io/group44-lab8_9/
 ### 1. Group number: 44
 ### 2. Group members: Lisa Korolyov, Zechen Zhou
-### 3. Link to the GitHub repository: https://github.com/SEG3125-A/group44-lab8
+### 3. Link to the GitHub repository: https://github.com/SEG3125-A/group44-lab8_9
 ### 4. Each member's contribution:
 
 >Lisa Korolyov
