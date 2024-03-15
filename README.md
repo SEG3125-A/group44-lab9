@@ -14,3 +14,34 @@
 
 ### 5. Snapshots of the website: 
   ![](/Docs/Images/snapshot1.png)
+
+### 6. How to run the app:
+
+#### 1. At the root of this directory, install the dependencies specified in the package.json file:
+
+```bash
+npm install
+```
+
+#### 2. To run the app on development:
+
+```bash
+npm start
+```
+
+#### 3. To run the app on production (if we want optimal performance):
+
+Build the application:
+```bash
+npm run build
+```
+
+Install a Node.js package called "serve" using npm **_(one-time setting)_**:
+```bash
+npm install -g serve
+```
+
+Then serve it with a static server:
+```bash
+serve -s build
+```
