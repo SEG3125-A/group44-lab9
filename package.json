@@ -1,9 +1,11 @@
 {
   "name": "group44-lab8_9",
   "version": "1.0.0",
-  "description": "Car rental",
+  "homepage": "https://seg3125-a.github.io/group44-lab8_9/",  "description": "Car rental",
   "main": "src/index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -26,5 +28,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
