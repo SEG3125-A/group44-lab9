@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/group44-lab8_9/static/css/main.af165dd2.css",
+    "main.js": "/group44-lab8_9/static/js/main.843c1111.js",
+    "index.html": "/group44-lab8_9/index.html",
+    "main.af165dd2.css.map": "/group44-lab8_9/static/css/main.af165dd2.css.map",
+    "main.843c1111.js.map": "/group44-lab8_9/static/js/main.843c1111.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af165dd2.css",
+    "static/js/main.843c1111.js"
+  ]
+}
