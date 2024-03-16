@@ -4,11 +4,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..//src/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap.bundle.min.js"></script>
+
+    <script src="./jquery-3.2.1.slim.min.js"></script>    
+
     <title>(Y)OUR CAR</title>
 </head>
 
-<body>
-    <dev id="root"></dev>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar fixed-top navbar-light bg-light navbar-expand-md">
+        <div class="container-fluid">
+            <!-- shop name and logo -->
+            <a class="navbar-brand" style="position: relative" href="#">
+                <!-- https://www.flaticon.com/free-icon/car_846296?term=car&related_id=846296 -->
+                <img src="./logo.png" alt="Logo" width="50" height="50"/>
+                <span id="pageTitle">(Y)OUR CAR</span>
+            </a>
+
+            <!-- navbar menus -->
+            <div class="collapse navbar-collapse navbar-font justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="rentLink" class="nav-link" href="#Rent">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="faqLink" class="nav-link" href="#FAQ">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="locationsLink" class="nav-link" href="#Locations">Locations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>     
+
+    <div id="pageContent" style="margin-top: 100px;">
+        <div id="rentDiv" class="tabcontent container">
+            <h3>RENT DIV</h3>
+        </div>
+
+        <div id="faqDiv" class="tabcontent container">
+            <h3>FAQ DIV</h3>
+        </div>
+
+        <div id="locationsDiv" class="tabcontent container">
+            <h3>Locations</h3>
+            
+            <div class="bg-light mt-4 pb-4">
+                <h5 class="p-3">Ottawa</h5>
+                <div class="row ms-5 pt-3">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Churchill</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>681 Churchill Rd.</td>
+                            </tr>
+                            <tr>
+                                <td>Ottawa, ON</td>
+                            </tr>
+                            <tr>
+                                <td>N3C 4H5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row ms-5 pt-5">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Laurier</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>67 Laurier St.</td>
+                            </tr>
+                            <tr>
+                                <td>Ottawa, ON</td>
+                            </tr>
+                            <tr>
+                                <td>F9T 3J5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="bg-light mt-4 pb-4">
+                <h5 class="p-3">Toronto</h5>
+                <div class="row ms-5 pt-3">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Markham</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>6510 Queen Elizabeth Blvd.</td>
+                            </tr>
+                            <tr>
+                                <td>Markham, ON</td>
+                            </tr>
+                            <tr>
+                                <td>W9H 8C0</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>9:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>9:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>9:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>9:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>9:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row ms-5 pt-5">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Oakville</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>189 Kingston Ave.</td>
+                            </tr>
+                            <tr>
+                                <td>Oakville, ON</td>
+                            </tr>
+                            <tr>
+                                <td>Q8G 9C3</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>10:00 - 16:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row ms-5 pt-5">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Niagara</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>94 King George Blvd.</td>
+                            </tr>
+                            <tr>
+                                <td>Niagara, ON</td>
+                            </tr>
+                            <tr>
+                                <td>K3C 9F9</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>8:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>8:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>8:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>8:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>8:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>9:00 - 16:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>9:00 - 16:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="bg-light mt-4 pb-4">
+                <h5 class="p-3">Sudbury</h5>
+                <div class="row ms-5 pt-3">
+                    <div class="col-sm">
+                        <p class="location-header">(Y)OUR CAR - Sudbury</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Address</p>
+
+                        <table>
+                            <tr>
+                                <td>150 Hamilton Dr.</td>
+                            </tr>
+                            <tr>
+                                <td>Sudbury, ON</td>
+                            </tr>
+                            <tr>
+                                <td>Y8D 6B3</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <p class="location-header">Hours of operation</p>
+
+                        <table>
+                            <tr>
+                                <td class="hours-day-col">Mon</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Tue</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Wed</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Thu</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Fri</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sat</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                            <tr>
+                                <td class="hours-day-col">Sun</td>
+                                <td>9:00 - 17:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+    </div>
+
+
+    <div id="root"></div>
 </body>
 
 </html>
