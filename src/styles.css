@@ -10,3 +10,21 @@
 .hide {
   display: none;
 }
+
+.faq-page-title {
+  float: left;
+  width: max-content;
+}
+
+.faq-page-search {
+  float: right;
+}
+
+.search-block {
+  width: 400px;
+  display: inline-flex;
+}
+
+.search-button {
+  margin-left: 10px;
+}
