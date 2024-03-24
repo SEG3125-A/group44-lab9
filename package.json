@@ -14,7 +14,9 @@
   },
   "author": "Zechen, Lisa",
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "react": "^18.0.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.0.0",
     "react-scripts": "^5.0.1"
   },

@@ -1,5 +1,5 @@
-import React, {StrictMode} from "react";
-import {createRoot} from "react-dom/client";
+import React from "react";
+import ReactDOM from 'react-dom';
 import "./styles.css";
 import App from "./App";
 
@@ -11,14 +11,7 @@ const rentDiv = document.getElementById('rentDiv');
 const faqDiv = document.getElementById('faqDiv');
 const locationsDiv = document.getElementById('locationsDiv');
 
-
-const root = createRoot(document.getElementById("root"));
-root.render(
-    <StrictMode>
-        <App />
-    </StrictMode>
-);
-
+ReactDOM.render(<App />, document.getElementById('root'));
 
 
 window.onload = () => {

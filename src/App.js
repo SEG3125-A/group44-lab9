@@ -1,3 +1,12 @@
-export default function Square() {
-    return <button className="square">X</button>
+import React, { Component } from 'react';
+import ContactUsButton from './contactUsButton'
+
+class App extends Component {
+    render() {
+        return (
+            <ContactUsButton />
+        )
+    }
 }
+
+export default App;
