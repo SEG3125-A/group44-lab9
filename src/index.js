@@ -35,6 +35,7 @@ ReactDOM.render(
         </Suspense>
     </React.StrictMode>,
     document.getElementById('root')
+);
 
 window.onload = () => {
     faqDiv.classList.add('hide');
