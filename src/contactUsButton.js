@@ -1,12 +1,15 @@
 import Accordion from 'react-bootstrap/Accordion';
 import "./styles.css";
+import { useTranslation } from 'react-i18next';
 
 function ContactUsButton() {
+  const { t } = useTranslation();
+
   return (
 
     <div class="container mt-5">
       <button class="btn btn-primary position-fixed bottom-0 end-0 m-5" type="button" data-bs-toggle="collapse" data-bs-target="#chatFormCollapse" aria-expanded="false" aria-controls="chatFormCollapse">
-        Contact Us
+        { t("contactUs_button_msg") }
       </button>
 
       <div class="collapse mt-3 col-3 position-fixed bottom-0 end-0 m-0" id="chatFormCollapse">

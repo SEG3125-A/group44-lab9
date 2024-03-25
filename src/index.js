@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from 'react-dom';
 import "./styles.css";
 import App from "./App";
+import "./i18n.js"
 
 const rentLink = document.getElementById('rentLink');
 const faqLink = document.getElementById('faqLink');
@@ -11,13 +12,20 @@ const rentDiv = document.getElementById('rentDiv');
 const faqDiv = document.getElementById('faqDiv');
 const locationsDiv = document.getElementById('locationsDiv');
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+    <React.StrictMode>
+        {/* Make sure i18next is done fetching the string prior to the app loading */}
+        <Suspense fallback="Loading...">
+            <App />
+        </Suspense>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
 
 window.onload = () => {
     faqDiv.classList.add('hide');
     locationsDiv.classList.add('hide');
-    
+
     if (rentDiv.classList.contains('hide')) {
         rentDiv.classList.remove('hide');
     }
