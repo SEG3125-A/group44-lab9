@@ -1,5 +1,3 @@
-import Accordion from 'react-bootstrap/Accordion';
-import "./styles.css";
 import { useTranslation } from 'react-i18next';
 
 function ContactUsButton() {

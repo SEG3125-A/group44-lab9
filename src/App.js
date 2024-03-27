@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import ContactUsButton from './contactUsButton'
+import LanguageSelector from './LanguageSelector';
 
 class App extends Component {
     render() {
         return (
-            <ContactUsButton />
+            <div>
+                <ContactUsButton />
+                <LanguageSelector />
+            </div>
         )
     }
 }
