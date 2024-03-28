@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import Form from 'react-bootstrap/Form';
 
 // Contains the value and text for the optinos
 const languages = [
@@ -35,17 +36,17 @@ function LanguageSelector() {
 
   return (
     <div>
-      <label htmlFor="language-select">{t("select_language_label")}</label>
-      <select
-        id="language-select"
+      <Form.Select aria-label="Language Select" id="language-select"
         value={lang}
         onChange={handleChange}>
         {languages.map((item) => (
           <option key={item.value} value={item.value}>
             {item.text}
           </option>
-        ))}
-      </select>
+          ))}
+        </Form.Select>
+
+
     </div>
   );
 

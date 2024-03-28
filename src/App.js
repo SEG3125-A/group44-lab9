@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactUsButton from './contactUsButton'
-import LanguageSelector from './LanguageSelector';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MultiStepProgressBar from './components/MultiStepProgressBar';
+import MyNavBar from './components/MyNavBar';
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -11,6 +11,8 @@ function App() {
   
     return (
       <div>
+        <MyNavBar />
+
         {/* className="h-100": A height of 100%  */}
         <Container className="h-100">
           <Row className='h-100'>
@@ -19,9 +21,6 @@ function App() {
             </Col>
           </Row>
         </Container>
-
-        <LanguageSelector/>
-        <ContactUsButton/>
       </div>
     );
   }
