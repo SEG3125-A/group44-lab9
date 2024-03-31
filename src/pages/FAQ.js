@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import ContactUsButton from "../components/contactUsButton";
 import FAQList from "../components/FAQList";
@@ -53,6 +53,8 @@ function FAQ() {
         </Form>
       </div>
 
+      <br />
+      
       {filteredFAQ.map((faq, index) => (
         renderFAQ(faq.question, faq.answer)
       ))}
