@@ -1,3 +1,4 @@
+// This file implements the nav bar
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -31,9 +32,9 @@ function MyNavBar() {
             <Navbar.Collapse id="basic-navbar-nav">
 
               <Nav className="me-auto">
-                <Nav.Link href="/">Rent</Nav.Link>
-                <Nav.Link href="/faq">FAQ</Nav.Link>
-                <Nav.Link href="/locations">Locations</Nav.Link>
+                <Nav.Link href="/" style={{ fontSize: '20px' }}>Rent</Nav.Link>
+                <Nav.Link href="/faq" style={{ fontSize: '20px' }}>FAQ</Nav.Link>
+                <Nav.Link href="/locations" style={{ fontSize: '20px' }}>Locations</Nav.Link>
               </Nav>
 
               <Nav className="justify-content-end">

@@ -1,3 +1,4 @@
+// This file implements the multi-step progress bar to show the step you are at
 import React from "react";
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
@@ -8,7 +9,7 @@ const MultiStepProgressBar = (props) => {
     return (
         <ProgressBar
             percent={((props.step - 1) / 2 * 100)}
-            filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+            filledBackground="linear-gradient(to right, #0CBC00)"
         >
             {/* step 1 */}
             <Step transition="scale">

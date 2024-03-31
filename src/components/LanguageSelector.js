@@ -1,8 +1,9 @@
+// This file implements the language selector to change language
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Form from 'react-bootstrap/Form';
 
-// Contains the value and text for the optinos
+// Contains the value and text for the options
 const languages = [
   { value: "", text: "Options" },
   { value: "en", text: "English" },

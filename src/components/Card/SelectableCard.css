@@ -1,0 +1,11 @@
+/* change the style when the mouse is hovering over */
+.hoverable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: #0cbc00;
+}
+
+/* set the background color when the card is selected */
+.selected {
+    background-color: #0dbc0064;
+}
