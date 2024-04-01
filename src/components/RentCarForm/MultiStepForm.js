@@ -66,18 +66,19 @@ function MultiStepForm(props) {
     const [answers, setAnswers] = useState({ index: props.step });
 
     const updateAnswers = (value, category) => {
-        setAnswers({ ...answers, [category]: value })
+        setAnswers(prevAnswers => ({
+            ...prevAnswers,
+            [step]: {
+                ...(prevAnswers[step] || {}), // Preserve answers for other steps
+                [category]: value
+            }
+        }));
     }
 
+    // Update parent component with answers when step changes
     useEffect(() => {
-
-        if (Object.keys(answers).length > 1) {
-            props.onPageUpdate(answers.index, answers);
-            setAnswers({index: props.step})
-        } else{
-            setAnswers({index: props.step})
-        }
-    }, [props.step])
+        props.onPageUpdate(step, answers[step] || {}); // Pass answers for current step
+    }, [step, answers]);
 
     const [selectedItemId, setSelectedItemId] = useState(null);
 
