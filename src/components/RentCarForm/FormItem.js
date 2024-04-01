@@ -1,8 +1,16 @@
 // This file includes all the form items 
 
 import { Form } from "react-bootstrap";
+import { useState } from "react";
 
-export const FormItem = ({ item }) => {
+export const FormItem = ({ item, onChange, answer }) => {
+    const [currentValue, setCurrentValue] = useState(answer || null);
+
+    const handleChange = (value) => {
+        setCurrentValue(value);
+        onChange(value, item.value);
+    }
+
     // Create different fields based on the type of questions
     switch (item.type) {
         case 'text':
@@ -15,8 +23,10 @@ export const FormItem = ({ item }) => {
                     <Form.Control
                         required
                         type="text"
+                        onChange={(e) => handleChange(e.target.value, item.value)}
                         placeholder={item.label}
                         id={item.id}
+                        value={currentValue}
                     />
                     <Form.Control.Feedback type="invalid">
                         Please enter a location.
@@ -34,7 +44,9 @@ export const FormItem = ({ item }) => {
                     <Form.Control
                         required
                         type="date"
+                        onChange={(e) => handleChange(e.target.value, item.value)}
                         id={item.id}
+                        value={currentValue}
                     />
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </>
@@ -50,7 +62,9 @@ export const FormItem = ({ item }) => {
                     <Form.Control
                         required
                         type="time"
+                        onChange={(e) => handleChange(e.target.value, item.value)}
                         id={item.id}
+                        value={currentValue}
                     />
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </>
@@ -65,6 +79,7 @@ export const FormItem = ({ item }) => {
                     <Form.Control
                         required
                         type="date"
+                        onChange={(e) => handleChange(e.target.value, item.value)}
                         id={item.id}
                     />
                 </>

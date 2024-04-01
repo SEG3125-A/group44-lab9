@@ -14,6 +14,14 @@ function Rent() {
 
   const [validated, setValidated] = useState(false);
 
+  // initialize it as an empty object
+  const [pagesAnswers, setPageAnswers] = useState({});
+
+  const onPagesAnswerUpdate = (step, answerObj) => {
+    // ""..pagesAnswers" keep the previous pagesAnswers, just update a particular answer
+    setPageAnswers({...pagesAnswers, [step]: answerObj});
+  }
+
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -76,14 +84,14 @@ function Rent() {
                 <Card.Body>
 
                   {/* Pass the parameters "index"(step number) and "FormQuestions" to the component "MultiStepForm" */}
-                  <MultiStepForm step={index} list={FormQuestions} />
+                  <MultiStepForm step={index} list={FormQuestions} onPageUpdate={onPagesAnswerUpdate} pagesAnswers={pagesAnswers} />
                 </Card.Body>
 
                 <Card.Footer className="d-flex justify-content-between">
                   <Button onClick={backButton} disabled={index === 1} variant="secondary">Back</Button>
 
                   {/* we handle the submit through the Form "onSubmit" property by using the function handleSubmit() */}
-                  <Button type="submit" variant="primary">{index ===  totalPageCount? 'Submit' : 'Next'}</Button>
+                  <Button type="submit" variant="primary">{index === totalPageCount ? 'Submit' : 'Next'}</Button>
                 </Card.Footer>
 
               </Form>

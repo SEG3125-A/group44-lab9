@@ -8,17 +8,20 @@ const FormQuestions = [
                 id: "pickup_location",
                 label: 'Location',
                 type: 'text',
-                hint: 'Location'
+                hint: 'Location',
+                value: 'pickup_location',
             },
             {
                 id: "pickup_date",
                 label: 'Date',
                 type: 'date',
+                value: 'pickup_date',
             },
             {
                 id: "pickup_time",
                 label: 'Time',
                 type: 'time',
+                value: 'pickup_time',
             }
         ],
 
@@ -27,17 +30,20 @@ const FormQuestions = [
                 id: "dropoff_location",
                 label: 'Location',
                 type: 'text',
-                hint: 'Location'
+                hint: 'Location',
+                value: 'dropoff_location',
             },
             {
                 id: "dropoff_date",
                 label: 'Date',
                 type: 'date',
+                value: 'dropoff_date',
             },
             {
                 id: "dropoff_time",
                 label: 'Time',
                 type: 'time',
+                value: 'dropoff_time',
             }
         ]
     },
@@ -102,26 +108,31 @@ const FormQuestions = [
                 id: "first_name",
                 label: 'First name',
                 type: 'text',
+                value: 'firstName',
             },
             {
                 id: "last_name",
                 label: 'Last name',
                 type: 'text',
+                value: 'lastName',
             },
             {
                 id: "card_number",
                 label: 'Card number',
                 type: 'number',
+                value: 'cardNumber',
             },
             {
                 id: "cvv",
                 label: 'CVV',
                 type: 'number',
+                value: 'cvv',
             },
             {
                 id: "billing_address",
                 label: 'Billing address',
                 type: 'text',
+                value: 'billingAddress',
             }
         ]
     }
