@@ -10,6 +10,8 @@ function Rent() {
   // default state is 1
   const [index, setIndex] = useState(1);
 
+  const totalPageCount = FormQuestions.length;
+
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -19,16 +21,24 @@ function Rent() {
       event.stopPropagation();
     }
 
-    if (form.reportValidity() === true) {
+    // Check if it's the last step and the form is valid
+    if (index === totalPageCount && form.reportValidity() === true) {
       // prevent the form from being submitted
       event.preventDefault();
       event.stopPropagation();
-
-      // go to next step by calling nextButton
-      nextButton();
     }
 
+    // Set form validation flag
     setValidated(true);
+
+    // Move to next step if it's not the last step
+    if (index < totalPageCount && form.reportValidity() === true) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      nextButton();
+      setValidated(false);
+    }
   };
 
   // decrease the index number by 1 when the "Back" button is clicked
@@ -73,7 +83,7 @@ function Rent() {
                   <Button onClick={backButton} disabled={index === 1} variant="secondary">Back</Button>
 
                   {/* we handle the submit through the Form "onSubmit" property by using the function handleSubmit() */}
-                  <Button type="submit" variant="primary">Next</Button>
+                  <Button type="submit" variant="primary">{index ===  totalPageCount? 'Submit' : 'Next'}</Button>
                 </Card.Footer>
 
               </Form>

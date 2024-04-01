@@ -5,8 +5,9 @@
 
 import { useState } from 'react';
 import { FormItem } from "./FormItem";
-import { Form, Row, Col } from "react-bootstrap";
+import { Form, Row, Col, Alert } from "react-bootstrap";
 import SelectableCard from "../Card/SelectableCard";
+import Step3 from './Step3';
 
 // Render the items horizontally for the first step
 function renderFormItemRow(title, items) {
@@ -79,10 +80,12 @@ function MultiStepForm(props) {
                 </>
             )}
             {step === 3 && (
-                <>
-                    <h3></h3>
-                    { }
-                </>
+                <Step3 />
+            )}
+            {step === 4 && (
+                <Alert variant="success">
+                    Form submitted successfully!
+                </Alert>
             )}
         </div>
     )
