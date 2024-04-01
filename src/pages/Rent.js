@@ -1,5 +1,5 @@
 // This file renders the rent page
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import MultiStepProgressBar from '../components/ProgressBar/MultiStepProgressBar'
 import { useState } from "react";
 import "./Rent.css";
@@ -9,6 +9,27 @@ import MultiStepForm from "../components/RentCarForm/MultiStepForm";
 function Rent() {
   // default state is 1
   const [index, setIndex] = useState(1);
+
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    if (form.reportValidity() === true) {
+      // prevent the form from being submitted
+      event.preventDefault();
+      event.stopPropagation();
+
+      // go to next step by calling nextButton
+      nextButton();
+    }
+
+    setValidated(true);
+  };
 
   // decrease the index number by 1 when the "Back" button is clicked
   const backButton = () => {
@@ -25,7 +46,7 @@ function Rent() {
   }
 
   return (
-    <div className="tabcontent container col-md-8">
+    <div className="container col-md-8">
       <h1>Rent</h1>
 
       <div className="progressbar">
@@ -40,17 +61,22 @@ function Rent() {
 
           <Row>
             <Card>
-              <Card.Body>
+              <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-                {/* Pass the parameters "index"(step number) and "FormQuestions" to the component "MultiStepForm" */}
-                <MultiStepForm step={index} list={FormQuestions} />
+                <Card.Body>
 
-              </Card.Body>
+                  {/* Pass the parameters "index"(step number) and "FormQuestions" to the component "MultiStepForm" */}
+                  <MultiStepForm step={index} list={FormQuestions} />
+                </Card.Body>
 
-              <Card.Footer className="d-flex justify-content-between">
-                <Button onClick={backButton} disabled={index === 1} variant="secondary">Back</Button>
-                <Button onClick={nextButton} variant="primary">Next</Button>
-              </Card.Footer>
+                <Card.Footer className="d-flex justify-content-between">
+                  <Button onClick={backButton} disabled={index === 1} variant="secondary">Back</Button>
+
+                  {/* we handle the submit through the Form "onSubmit" property by using the function handleSubmit() */}
+                  <Button type="submit" variant="primary">Next</Button>
+                </Card.Footer>
+
+              </Form>
 
             </Card>
           </Row>

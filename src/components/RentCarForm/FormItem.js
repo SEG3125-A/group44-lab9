@@ -13,10 +13,14 @@ export const FormItem = ({ item }) => {
                     </Form.Label>
 
                     <Form.Control
+                        required
                         type="text"
                         placeholder={item.label}
                         id={item.id}
                     />
+                    <Form.Control.Feedback type="invalid">
+                        Please enter a location.
+                    </Form.Control.Feedback>
                 </>
             )
             break;
@@ -28,9 +32,11 @@ export const FormItem = ({ item }) => {
                     </Form.Label>
 
                     <Form.Control
+                        required
                         type="date"
                         id={item.id}
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </>
             )
             break;
@@ -42,9 +48,11 @@ export const FormItem = ({ item }) => {
                     </Form.Label>
 
                     <Form.Control
+                        required
                         type="time"
                         id={item.id}
                     />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                 </>
             )
         case 'card':
@@ -55,6 +63,7 @@ export const FormItem = ({ item }) => {
                     </Form.Label>
 
                     <Form.Control
+                        required
                         type="date"
                         id={item.id}
                     />
