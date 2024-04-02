@@ -1,21 +1,11 @@
-# Lab 8 & 9 -- SEG3125
+# Lab 9 -- SEG3125
 
 ### 0. Link to this webpage: https://seg3125-a.github.io/group44-lab9/
 ### 1. Group number: 44
 ### 2. Group members: Lisa Korolyov, Zechen Zhou
 ### 3. Link to the GitHub repository: https://github.com/SEG3125-A/group44-lab9
-### 4. Each member's contribution:
 
->Lisa Korolyov
-* 
-
->Zechen Zhou
-* 
-
-### 5. Snapshots of the website: 
-  ![](/Docs/Images/snapshot1.png)
-
-### 6. How to run the app:
+### 4. How to run the app:
 
 #### 1. At the root of this directory, install the dependencies specified in the package.json file:
 
@@ -46,7 +36,7 @@ Then serve it with a static server:
 serve -s build
 ```
 
-### 7. Notes： Deploy This React App To GitHub Pages:
+### 5. Notes： Deploy This React App To GitHub Pages:
 Reference: https://github.com/gitname/react-gh-pages
 
 #### 1. Install the `gh-pages` npm package and designate it as a development dependency:
