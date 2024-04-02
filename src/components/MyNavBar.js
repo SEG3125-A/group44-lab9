@@ -19,11 +19,11 @@ function MyNavBar() {
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
 
-            <Navbar.Brand href="/">
-              
+            <Navbar.Brand href="/group44-lab9">
+
               <img
                 alt=""
-                src="./images/logo.png"
+                src="/images/logo.png"
                 width="50"
                 height="50"
                 className="d-inline-block align-top"
@@ -35,9 +35,9 @@ function MyNavBar() {
             <Navbar.Collapse id="basic-navbar-nav">
 
               <Nav className="me-auto">
-                <Nav.Link href="/" style={{ fontSize: '20px' }}>{t("rent_tap")}</Nav.Link>
-                <Nav.Link href="/faq" style={{ fontSize: '20px' }}>{t("faq_tap")}</Nav.Link>
-                <Nav.Link href="/locations" style={{ fontSize: '20px' }}>{t("location_label_tap")}</Nav.Link>
+                <Nav.Link href="/group44-lab9" style={{ fontSize: '20px' }}>{t("rent_tap")}</Nav.Link>
+                <Nav.Link href="/group44-lab9/faq" style={{ fontSize: '20px' }}>{t("faq_tap")}</Nav.Link>
+                <Nav.Link href="/group44-lab9/locations" style={{ fontSize: '20px' }}>{t("location_label_tap")}</Nav.Link>
               </Nav>
 
               <Nav className="justify-content-end">
@@ -49,9 +49,9 @@ function MyNavBar() {
         </Navbar>
 
         <Routes>
-          <Route path="/" element={<Rent />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/locations" element={<Locations />} />
+          <Route path="/group44-lab9" element={<Rent />} />
+          <Route path="/group44-lab9/faq" element={<FAQ />} />
+          <Route path="/group44-lab9/locations" element={<Locations />} />
         </Routes>
 
       </Router>

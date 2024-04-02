@@ -3,6 +3,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import ContactUsButton from "../components/contactUsButton";
 import FAQList from "../components/FAQList";
 import { useTranslation } from 'react-i18next';
+import "./FAQ.css";
 
 function renderFAQ(question, answer) {
   const { t } = useTranslation();
@@ -45,8 +46,8 @@ function FAQ() {
     <div className="tabcontent container col-md-8">
       <h1>{t("faq_tap")}</h1>
 
-      <div class="faq-page-search">
-        <Form class="form-inline my-2 my-lg-0 search-block">
+      <div className="faq-page-search">
+        <Form className="form-inline my-2 my-lg-0 search-block">
           <input
             className="form-control mr-sm-2"
             type="search"
