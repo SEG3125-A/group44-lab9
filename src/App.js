@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
-import ContactUsButton from './contactUsButton'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyNavBar from './components/MyNavBar';
+import { useState } from "react";
+import ContactUsButton from './components/contactUsButton';
 
-class App extends Component {
-    render() {
-        return (
-            <ContactUsButton />
-        )
-    }
+function App() {
+  // default state is 1
+  const [index, setIndex] = useState(1);
+
+  return (
+    <div>
+      <MyNavBar />
+      <ContactUsButton />
+    </div>
+  );
 }
 
 export default App;
