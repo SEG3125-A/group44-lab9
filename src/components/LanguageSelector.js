@@ -5,10 +5,8 @@ import Form from 'react-bootstrap/Form';
 
 // Contains the value and text for the options
 const languages = [
-  { value: "", text: "Options" },
   { value: "en", text: "English" },
   { value: "fr", text: "Français" },
-  { value: "es", text: "Español" },
   { value: "ru", text: "Русский" },
   { value: "zh", text: "简体中文" },
 ]

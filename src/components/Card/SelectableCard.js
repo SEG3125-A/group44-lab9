@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { Card, Collapse } from 'react-bootstrap';
 import "./SelectableCard.css"
+import { useTranslation } from 'react-i18next';
 
 function SelectableCard(props) {
   const { myItem, isSelected, handleClick } = props;
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     // mt-3 adds margin to the top
@@ -21,18 +23,18 @@ function SelectableCard(props) {
       >
         <Card.Img variant="top" src={myItem.img_src} />
         <Card.Body>
-          <Card.Title>{myItem.title} {myItem.price}</Card.Title>
+          <Card.Title>{t(myItem.title)} {t(myItem.price)}</Card.Title>
 
           <Card.Link
             onClick={() => setOpen(!open)}
             aria-controls="example-collapse-text"
             aria-expanded={open}
           >
-            Learn more
+            {t("learn_more_button_msg")}
           </Card.Link>
           <Collapse in={open}>
             <div id="example-collapse-text">
-              {myItem.learn_more}
+              {t(myItem.learn_more)}
             </div>
           </Collapse>
 

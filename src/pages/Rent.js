@@ -5,8 +5,11 @@ import { useState } from "react";
 import "./Rent.css";
 import FormQuestions from "../components/RentCarForm/FormQuestions";
 import MultiStepForm from "../components/RentCarForm/MultiStepForm";
+import { useTranslation } from 'react-i18next';
 
 function Rent() {
+  const { t } = useTranslation();
+
   // default state is 1
   const [index, setIndex] = useState(1);
 
@@ -41,6 +44,7 @@ function Rent() {
 
     // Move to next step if it's not the last step
     if (index < totalPageCount && form.reportValidity() === true) {
+      // if (index < totalPageCount) {
       event.preventDefault();
       event.stopPropagation();
 
@@ -65,7 +69,7 @@ function Rent() {
 
   return (
     <div className="container col-md-8">
-      <h1>Rent</h1>
+      <h1>{t("rent_tap")}</h1>
 
       <div className="progressbar">
         {/* className="h-100": A height of 100%  */}
@@ -88,10 +92,10 @@ function Rent() {
                 </Card.Body>
 
                 <Card.Footer className="d-flex justify-content-between">
-                  <Button onClick={backButton} disabled={index === 1} variant="secondary">Back</Button>
+                  <Button onClick={backButton} disabled={index === 1} variant="secondary">{t("back_button_msg")}</Button>
 
                   {/* we handle the submit through the Form "onSubmit" property by using the function handleSubmit() */}
-                  <Button type="submit" variant="primary">{index === totalPageCount ? 'Submit' : 'Next'}</Button>
+                  <Button type="submit" variant="primary">{index === totalPageCount ? t('submit_button_msg') : t('next_button_msg')}</Button>
                 </Card.Footer>
 
               </Form>

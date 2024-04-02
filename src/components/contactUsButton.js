@@ -25,14 +25,14 @@ function ContactUsButton() {
               <input type="text" className="form-control" id="nameInput" />
             </div>
             <div className="mb-3">
-              <label htmlFor="emailInput" className="form-label">{t("email_label")}</label>
+              <label htmlFor="emailInput" className="form-label">{t("email_address_label")}</label>
               <input type="text" className="form-control" id="emailInput" />
             </div>
             <div className="mb-3">
               <label htmlFor="questionInput" className="form-label">{t("question_label")}</label>
               <textarea className="form-control" id="questionInput" rows="3" />
             </div>
-            <button type="submit" className="btn btn-primary">{t("send_button_msg")}</button>
+            <button type="submit" className="btn btn-primary">{t("submit_button_msg")}</button>
           </form>
         </div>
       </div>

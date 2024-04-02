@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
+import { useTranslation } from 'react-i18next';
 
 function Step3() {
+    const { t } = useTranslation();
+
     const [validated, setValidated] = useState(false);
 
     const handleSubmit = (event) => {
@@ -21,66 +22,70 @@ function Step3() {
     return (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Row className="mb-3">
-                <h4>Contact Info</h4>
+                <h4>{t("contact_info_label")}</h4>
                 <Form.Group as={Col} md="4" controlId="validationCustom01">
-                    <Form.Label>First name</Form.Label>
+                    <Form.Label>{t("first_name_label")}</Form.Label>
                     <Form.Control
                         required
                         type="text"
-                        placeholder="First name"
+                        placeholder=""
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback>{t("looks_good_msg")}</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationCustom02">
-                    <Form.Label>Last name</Form.Label>
+                    <Form.Label>{t("last_name_label")}</Form.Label>
                     <Form.Control
                         required
                         type="text"
-                        placeholder="Last name"
+                        placeholder=""
                     />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                    <Form.Control.Feedback>{t("looks_good_msg")}</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="4" controlId="validationCustomUsername">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>{t("email_address_label")}</Form.Label>
                     <Form.Control
                         required
                         type="email"
                         placeholder="name@example.com"
                     />
                     <Form.Control.Feedback type="invalid">
-                        Please enter a valid email.
+                        {/* Please enter a valid email. */}
+                        {t("email_invalid_feedback_msg")}
                     </Form.Control.Feedback>
                 </Form.Group>
             </Row>
             <Row className="mb-5">
                 <Form.Group as={Col} md="4" controlId="validationCustom03">
-                    <Form.Label>Phone</Form.Label>
+                    <Form.Label>{t("phone_label")}</Form.Label>
                     <Form.Control type="number" required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid phone number.
+                        {/* Please provide a valid phone number. */}
+                        {t("phone_invalid_feedback_msg")}
                     </Form.Control.Feedback>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
-                <h4>Payment Info</h4>
+                <h4>{t("payment_info_label")}</h4>
                 <Form.Group as={Col} md="6" controlId="validationCustom04">
-                    <Form.Label>Card number</Form.Label>
+                    <Form.Label>{t("card_number_label")}</Form.Label>
                     <Form.Control type="number" required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid card number.
+                        {/* Please provide a valid card number. */}
+                        {t("card_number_invalid_feedback_msg")}
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group as={Col} md="6" controlId="validationCustom04">
-                    <Form.Label>Billing address</Form.Label>
+                    <Form.Label>{t("billing_address_label")}</Form.Label>
                     <Form.Control type="text" required />
                     <Form.Control.Feedback type="invalid">
-                        Please provide a valid address.
+                        {/* Please provide a valid address. */}
+                        {t("address_invalid_feedback_msg")}
                     </Form.Control.Feedback>
                 </Form.Group>
             </Row>
             <Row className="mb-3">
                 <Form.Group as={Col} md="2" controlId="validationCustom05">
-                    <Form.Label>CVV</Form.Label>
+                    <Form.Label>{t("cvv_label")}</Form.Label>
                     <Form.Control type="password" required />
                 </Form.Group>
             </Row>
@@ -88,8 +93,8 @@ function Step3() {
             <Form.Group className="mb-3">
                 <Form.Check
                     required
-                    label="Agree to terms and conditions"
-                    feedback="You must agree before submitting."
+                    label = {t("form_check_label")} // Agree to terms and conditions
+                    feedback = {t("form_check_feedback_msg")} // You must agree before submitting.
                     feedbackType="invalid"
                 />
             </Form.Group>

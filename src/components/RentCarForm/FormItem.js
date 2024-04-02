@@ -2,6 +2,7 @@
 
 import { Form } from "react-bootstrap";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export const FormItem = ({ item, onChange, answer }) => {
     const [currentValue, setCurrentValue] = useState(answer || null);
@@ -11,20 +12,22 @@ export const FormItem = ({ item, onChange, answer }) => {
         onChange(value, item.value);
     }
 
+    const { t } = useTranslation();
+
     // Create different fields based on the type of questions
     switch (item.type) {
         case 'text':
             return (
                 <>
                     <Form.Label>
-                        {item.label}
+                        {t(item.label)}
                     </Form.Label>
 
                     <Form.Control
                         required
                         type="text"
                         onChange={(e) => handleChange(e.target.value, item.value)}
-                        placeholder={item.label}
+                        placeholder={t(item.label)}
                         id={item.id}
                         value={currentValue}
                     />
@@ -38,7 +41,7 @@ export const FormItem = ({ item, onChange, answer }) => {
             return (
                 <>
                     <Form.Label>
-                        {item.label}
+                        {t(item.label)}
                     </Form.Label>
 
                     <Form.Control
@@ -56,7 +59,7 @@ export const FormItem = ({ item, onChange, answer }) => {
             return (
                 <>
                     <Form.Label>
-                        {item.label}
+                        {t(item.label)}
                     </Form.Label>
 
                     <Form.Control

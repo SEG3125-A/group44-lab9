@@ -8,6 +8,7 @@ import { FormItem } from "./FormItem";
 import { Form, Row, Col, Alert } from "react-bootstrap";
 import SelectableCard from "../Card/SelectableCard";
 import Step3 from './Step3';
+import { useTranslation } from 'react-i18next';
 
 // Render the items horizontally for the first step
 // function renderFormItemRow(title, items) {
@@ -61,6 +62,8 @@ import Step3 from './Step3';
 
 // render from step 1 to step 3 on "Rent" page
 function MultiStepForm(props) {
+    const { t } = useTranslation();
+
     const { step, list } = props;
 
     const [answers, setAnswers] = useState({ index: props.step });
@@ -95,7 +98,7 @@ function MultiStepForm(props) {
                     <Row className="mt-3 mb-3">
                         <Col>
                             <Form.Label column>
-                                <h5>Pickup</h5>
+                                <h5>{t("pickup_label")}</h5>
                             </Form.Label>
                         </Col>
                         {list[step - 1].pickup?.map((item, index) => (
@@ -107,7 +110,7 @@ function MultiStepForm(props) {
                     <Row className="mt-3 mb-3">
                         <Col>
                             <Form.Label column>
-                                <h5>Drop-off</h5>
+                                <h5>{t("dropoff_label")}</h5>
                             </Form.Label>
                         </Col>
                         {list[step - 1].dropoff?.map((item, index) => (
@@ -120,7 +123,7 @@ function MultiStepForm(props) {
             )}
             {step === 2 && (
                 <>
-                    <h3>Select car type</h3>
+                    <h3>{t("select_car_type_label")}</h3>
                     <Row xs={1} md={2} className="g-4">
                         {list[step - 1].car?.map((item, index) => (
                             <Col key={item.label}>

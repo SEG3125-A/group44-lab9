@@ -2,23 +2,28 @@ import { useState } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import ContactUsButton from "../components/contactUsButton";
 import FAQList from "../components/FAQList";
+import { useTranslation } from 'react-i18next';
 
 function renderFAQ(question, answer) {
+  const { t } = useTranslation();
+
   return (
     <Col className="col-md-12 mt-4 mb-1">
       <Row>
-        <h5>{question}</h5>
+        <h5>{t(question)}</h5>
       </Row>
 
       <Row>
         {/* ps-5: (padding start) add padding to the left side of an element */}
-        <p className="ps-5">{answer}</p>
+        <p className="ps-5">{t(answer)}</p>
       </Row>
     </Col>
   );
 }
 
 function FAQ() {
+  const { t } = useTranslation();
+  
   const [searchQuery, setSearchQuery] = useState(''); // State variable to store the search query
   const [filteredFAQ, setFilteredFAQ] = useState(FAQList); // State variable to store the filtered FAQ items
 
@@ -38,7 +43,7 @@ function FAQ() {
 
   return (
     <div className="tabcontent container col-md-8">
-      <h1>FAQ</h1>
+      <h1>{t("faq_tap")}</h1>
 
       <div class="faq-page-search">
         <Form class="form-inline my-2 my-lg-0 search-block">

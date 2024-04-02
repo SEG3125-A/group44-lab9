@@ -6,20 +6,20 @@ const FormQuestions = [
         pickup: [
             {
                 id: "pickup_location",
-                label: 'Location',
+                label: 'location_label_tap', // Location
                 type: 'text',
                 hint: 'Location',
                 value: 'pickup_location',
             },
             {
                 id: "pickup_date",
-                label: 'Date',
+                label: 'date_label', // Date
                 type: 'date',
                 value: 'pickup_date',
             },
             {
                 id: "pickup_time",
-                label: 'Time',
+                label: 'time_label', // Time
                 type: 'time',
                 value: 'pickup_time',
             }
@@ -28,20 +28,20 @@ const FormQuestions = [
         dropoff: [
             {
                 id: "dropoff_location",
-                label: 'Location',
+                label: 'location_label_tap', // Location
                 type: 'text',
                 hint: 'Location',
                 value: 'dropoff_location',
             },
             {
                 id: "dropoff_date",
-                label: 'Date',
+                label: 'date_label', // Date
                 type: 'date',
                 value: 'dropoff_date',
             },
             {
                 id: "dropoff_time",
-                label: 'Time',
+                label: 'time_label', // Time
                 type: 'time',
                 value: 'dropoff_time',
             }
@@ -53,31 +53,31 @@ const FormQuestions = [
             {
                 id: "sedan",
                 img_src: './images/sedan.png',
-                title: 'Sedan - ',
-                price: 'CA$80.00 /day',
-                learn_more: 'Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 1 Large Bag, 2 Small Bags'
+                title: 'sedan_label', // Sedan - 
+                price: 'sedan_price', // CA$80.00 /day
+                learn_more: 'sedan_learn_more' // Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 1 Large Bag, 2 Small Bags
             }
             ,
             {
                 id: "suv",
                 img_src: './images/suv.png',
-                title: 'Suv - ',
-                price: 'CA$100.00 /day',
-                learn_more: 'Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 2 Large Bags, 2 Small Bags'
+                title: 'suv_label', // Suv - 
+                price: 'suv_price', // CA$100.00 /day
+                learn_more: 'suv_learn_more' // Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 2 Large Bags, 2 Small Bags
             },
             {
                 id: "truck",
                 img_src: './images/truck.png',
-                title: 'Truck - ',
-                price: 'CA$110.00 /day',
-                learn_more: 'Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 1 Large Bag, 3 Small Bags'
+                title: 'truck_label', // Truck - 
+                price: 'truck_price', // CA$110.00 /day
+                learn_more: 'truck_learn_more' // Smoke Free, 4 Doors, Automatic Transmission, Air Conditioning, 5 Seats, 1 Large Bag, 3 Small Bags
             },
             {
                 id: "minivan",
                 img_src: './images/minivan.png',
-                title: 'Minivan - ',
-                price: 'CA$120.00 /day',
-                learn_more: 'Smoke Free, 5 Doors, 7 Seats, Automatic Transmission, Air Conditioning, 3 Large Bags, 2 Small Bags'
+                title: 'minivan_label', // Minivan - 
+                price: 'minivan_price', // CA$120.00 /day
+                learn_more: 'minivan_learn_more' // Smoke Free, 5 Doors, 7 Seats, Automatic Transmission, Air Conditioning, 3 Large Bags, 2 Small Bags
             }
         ]
     },

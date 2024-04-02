@@ -10,31 +10,31 @@ const LocationList = [
                 address: "681 Churchill Rd. Ottawa, ON N3C 4H5",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '9:00 - 17:00'
                     }
                 ]
@@ -44,31 +44,31 @@ const LocationList = [
                 address: "67 Laurier St. Ottawa, ON F9T 3J5",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '10:00 - 16:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '10:00 - 16:00'
                     }
                 ]
@@ -84,31 +84,31 @@ const LocationList = [
                 address: "6510 Queen Elizabeth Blvd. Markham, ON W9H 8C0",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '9:00 - 18:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '9:00 - 18:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '9:00 - 18:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '9:00 - 18:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '9:00 - 18:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '9:00 - 17:00'
                     }
                 ]
@@ -118,31 +118,31 @@ const LocationList = [
                 address: "189 Kingston Ave. Oakville, ON Q8G 9C3",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '10:00 - 16:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '10:00 - 16:00'
                     }
                 ]
@@ -152,31 +152,31 @@ const LocationList = [
                 address: "94 King George Blvd. Niagara, ON K3C 9F9",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '8:00 - 17:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '8:00 - 17:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '8:00 - 17:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '8:00 - 17:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '8:00 - 18:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '9:00 - 16:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '9:00 - 16:00'
                     }
                 ]
@@ -192,31 +192,31 @@ const LocationList = [
                 address: "150 Hamilton Dr. Sudbury, ON Y8D 6B3",
                 hour_of_operation: [
                     {
-                        day: 'Mon',
+                        day: 'monday_label', // Monday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Tue',
+                        day: 'tuesday_label', // Tuesday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Wed',
+                        day: 'wednesday_label', // Wednesday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Thu',
+                        day: 'thursday_label', // Thursday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Fri',
+                        day: 'friday_label', // Friday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Sat',
+                        day: 'saturday_label', // Saturday
                         time: '9:00 - 17:00'
                     },
                     {
-                        day: 'Sun',
+                        day: 'sunday_label', // Sunday
                         time: '9:00 - 17:00'
                     }
                 ]

@@ -1,8 +1,11 @@
 import { Form, Row, Col, Accordion } from "react-bootstrap";
 import ContactUsButton from "../components/contactUsButton";
 import LocationList from "../components/LocationList"
+import { useTranslation } from 'react-i18next';
 
 function renderLocation(location) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Accordion defaultActiveKey="0">
@@ -16,13 +19,14 @@ function renderLocation(location) {
                 <Row>
                   <Col className="col-sm-6">
                     <h6>
-                      Hour Of Operation
+                      {/* Hour Of Operation */}
+                      {t("hour_of_operation_label")}
                     </h6>
                     {store.hour_of_operation.map((hour, index) => (
                       <Row key={index} className="mb-1">
                         <Col className="text-start">
                           <strong>
-                            {hour.day}:
+                            {t(hour.day)}
                           </strong>
                         </Col>
                         <Col className="text-start">
@@ -42,10 +46,11 @@ function renderLocation(location) {
 }
 
 function Locations() {
+  const { t } = useTranslation();
 
   return (
     <div className="container col-md-8">
-      <h1>Locations</h1>
+      <h1>{t("location_label_tap")}</h1>
       <>
         {LocationList.map((location, index) => (
           <div key={index}>

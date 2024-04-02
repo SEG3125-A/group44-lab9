@@ -8,8 +8,11 @@ import Rent from '../pages/Rent';
 import FAQ from '../pages/FAQ';
 import Locations from '../pages/Locations';
 import LanguageSelector from './LanguageSelector';
+import { useTranslation } from 'react-i18next';
 
 function MyNavBar() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Router>
@@ -32,9 +35,9 @@ function MyNavBar() {
             <Navbar.Collapse id="basic-navbar-nav">
 
               <Nav className="me-auto">
-                <Nav.Link href="/" style={{ fontSize: '20px' }}>Rent</Nav.Link>
-                <Nav.Link href="/faq" style={{ fontSize: '20px' }}>FAQ</Nav.Link>
-                <Nav.Link href="/locations" style={{ fontSize: '20px' }}>Locations</Nav.Link>
+                <Nav.Link href="/" style={{ fontSize: '20px' }}>{t("rent_tap")}</Nav.Link>
+                <Nav.Link href="/faq" style={{ fontSize: '20px' }}>{t("faq_tap")}</Nav.Link>
+                <Nav.Link href="/locations" style={{ fontSize: '20px' }}>{t("location_label_tap")}</Nav.Link>
               </Nav>
 
               <Nav className="justify-content-end">
