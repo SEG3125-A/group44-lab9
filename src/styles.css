@@ -119,3 +119,9 @@ input[type="radio"]:checked+div#cardDiv {
   justify-content: center;
   display: flex;
 }
+
+.car-details {
+  font-size: 15px;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
