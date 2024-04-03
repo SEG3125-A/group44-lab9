@@ -23,7 +23,7 @@ function MyNavBar() {
 
               <img
                 alt=""
-                src="/images/logo.png"
+                src="/images/logo.png" // set src="/group44-lab9/images/logo.png" for github.io, also need to delete ".dev" before deploying
                 width="50"
                 height="50"
                 className="d-inline-block align-top"
