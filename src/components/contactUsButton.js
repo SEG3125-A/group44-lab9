@@ -1,5 +1,7 @@
 // This file implements the contact us button
 import { useTranslation } from 'react-i18next';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 function ContactUsButton() {
   const { t } = useTranslation();
