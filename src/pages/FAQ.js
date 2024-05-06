@@ -5,11 +5,16 @@ import FAQList from "../components/FAQList";
 import { useTranslation } from 'react-i18next';
 import "./FAQ.css";
 
-function renderFAQ(question, answer) {
-  const { t } = useTranslation();
+function renderFAQ(question, answer, index, t) {
+/**
+ *  Calling 'useTranslation' hook inside the renderFAQ function, 
+ *  which is a violation of the rules of hooks because hooks 
+ *  should only be called at the top level of functional 
+ *  components or custom hooks, not inside nested functions.
+ */
 
   return (
-    <Col className="col-md-12 mt-4 mb-1">
+    <Col key={index} className="col-md-12 mt-4 mb-1">
       <Row>
         <h5>{t(question)}</h5>
       </Row>
@@ -34,10 +39,11 @@ function FAQ() {
     filterFAQ(event.target.value); // Call the filterFAQ function with the new search query
   };
 
-  // Function to filter the FAQ items based on the search query
+  // Function to filter the FAQ items based on the search query (Search questions)
   const filterFAQ = (query) => {
     const filtered = FAQList.filter((faq) =>
-      faq.question.toLowerCase().includes(query.toLowerCase())
+    // t(faq.question): Fetching the translated question using the label
+      t(faq.question).toLowerCase().includes(query.toLowerCase())
     );
     setFilteredFAQ(filtered); // Update the filtered FAQ items state
   };
@@ -49,9 +55,10 @@ function FAQ() {
       <div className="faq-page-search">
         <Form className="form-inline my-2 my-lg-0 search-block">
           <input
+            id="searchFaq"
             className="form-control mr-sm-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search Questions"
             aria-label="Search"
             value={searchQuery}
             onChange={handleSearchChange} // Call handleSearchChange function on input change
@@ -62,7 +69,9 @@ function FAQ() {
       <br />
       
       {filteredFAQ.map((faq, index) => (
-        renderFAQ(faq.question, faq.answer)
+        // Each child in a list should have a unique "key" prop
+        // index: assign index as a unique "key" prop to each child component
+        renderFAQ(faq.question, faq.answer, index, t)
       ))}
 
       <ContactUsButton />
